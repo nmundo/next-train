@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blue Line Stations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='semantic.min.css') }}" />
+</head>
+<body>
+<div class="ui top fixed menu">
+  <a class="item">Train times yo</a>
+</div>
+<div class="ui padded grid">
+  <div class="column">
+      <table class="ui very basic table">
+        {% for station in stations %}
+            <tr>
+                <td class="selectable">
+                  <a href="{{ url_for('see_next_train', station_id=station[0]) }}" class="header">{{ station[1] }}</a>
+                </td>
+            </tr>
+        {% endfor %}
+      </table>
+  </div>
+</div>
+</body>
+</html>
