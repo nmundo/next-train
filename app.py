@@ -36,7 +36,7 @@ def initdb_command():
     print('Initialized the database.')
 
 
-@app.route('/')
+@app.route('/next_train/')
 def station_list():
     db = get_db()
     cur = db.execute('SELECT id, name FROM stations ORDER BY id DESC')
