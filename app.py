@@ -77,8 +77,16 @@ def get_next_train(station_id, direction=None):
         'outbound': None
     }
 
+    current_day = datetime.today().weekday()
+    if current_day <= 4:
+        day = 'weekday'
+    elif current_day == 5:
+        day = 'saturday'
+    else:
+        day = 'sunday'
+
     if direction is None or direction == 'inbound':
-        with open('inbound.json', 'r') as f:
+        with open(f'{day}/inbound.json', 'r') as f:
             timetables['inbound'] = json.load(f)
 
         for timepoint in timetables['inbound'][station_id]:
@@ -90,7 +98,7 @@ def get_next_train(station_id, direction=None):
                     break
 
     if direction is None or direction == 'outbound':
-        with open('outbound.json', 'r') as f:
+        with open(f'{day}/outbound.json', 'r') as f:
             timetables['outbound'] = json.load(f)
 
         for timepoint in timetables['outbound'][station_id]:
