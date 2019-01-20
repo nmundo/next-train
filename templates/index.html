@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blue Line Stations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='semantic.min.css') }}" />
+</head>
+<body>
+<div class="ui top fixed large menu">
+    {% block nav_button %}
+        <a class="item">
+            <i class="train icon"></i>
+        </a>
+    {% endblock %}
+    <span class="borderless item">Blue Line Schedule</span>
+</div>
+<div class="ui padded grid">
+  <div class="column">
+      {% block content %}{% endblock %}
+  </div>
+</div>
+</body>
+</html>

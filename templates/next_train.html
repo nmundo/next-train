@@ -1,13 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Next Train for blah</title>
-</head>
-<body>
-<h1>Inbound:</h1>
-<div>{{ next_train.inbound }}</div>
-<h1>Outbound:</h1>
-<div>{{ next_train.outbound }}</div>
-</body>
-</html>
+{% extends "index.html" %}
+{% block nav_button %}
+    <a href="{{ url_for('station_list') }}" class="item">
+        <i class="chevron left icon"></i>
+    </a>
+{% endblock %}
+{% block content %}
+    <h4 class="ui center aligned icon header">
+      <i class="train icon"></i>
+      <div class="content">
+        Next Train
+        <div class="sub header">{{ station }} Station</div>
+      </div>
+    </h4>
+    <div class="ui centered card">
+      <div class="content">
+          <div class="ui center aligned header">
+            <div class="ui statistic">
+                <div class="value">
+                  {{ next_train.inbound }}
+                </div>
+                <div class="label">
+                  Inbound
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="ui centered card">
+      <div class="content">
+          <div class="ui center aligned header">
+              <div class="ui statistic">
+                <div class="value">
+                  {{ next_train.outbound }}
+                </div>
+                <div class="label">
+                  Outbound
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
+{% endblock %}

@@ -50,7 +50,7 @@ def see_next_train(station_id):
     next_train = get_next_train(station_id)
     db = get_db()
     cur = db.execute(f'SELECT name FROM stations WHERE id = {station_id}')
-    station = cur.fetchall()
+    station = cur.fetchone()[0]
     cur.close()
     return render_template('next_train.html', station=station, next_train=next_train)
 
@@ -86,7 +86,7 @@ def get_next_train(station_id, direction=None):
                 if datetime.strptime(timepoint, '%I:%M %p') < current_time:
                     pass
                 else:
-                    next_train['inbound'] = datetime.strptime(timepoint, '%I:%M %p')
+                    next_train['inbound'] = timepoint
                     break
 
     if direction is None or direction == 'outbound':
@@ -98,7 +98,7 @@ def get_next_train(station_id, direction=None):
                 if datetime.strptime(timepoint, '%I:%M %p') < current_time:
                     pass
                 else:
-                    next_train['outbound'] = datetime.strptime(timepoint, '%I:%M %p')
+                    next_train['outbound'] = timepoint
                     break
 
     return next_train
