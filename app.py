@@ -36,7 +36,7 @@ def initdb_command():
     print('Initialized the database.')
 
 
-@app.route('/next_train/')
+@app.route('/demo/next_train/')
 def station_list():
     db = get_db()
     cur = db.execute('SELECT id, name FROM stations ORDER BY id DESC')
@@ -45,7 +45,7 @@ def station_list():
     return render_template('station_list.html', stations=stations)
 
 
-@app.route('/next_train/<string:station_id>')
+@app.route('/demo/next_train/<string:station_id>')
 def see_next_train(station_id):
     next_train = get_next_train(station_id)
     db = get_db()
