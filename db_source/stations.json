@@ -1,0 +1,212 @@
+{
+  "stations": [
+    {
+      "id": 1,
+      "address": "218 E. Carson Bv",
+      "zip": 28203,
+      "name": "Carson",
+      "lon": -80.850916688504313,
+      "lat": 35.218795681292669
+    },
+    {
+      "id": 2,
+      "address": "303 E. Trade St",
+      "zip": 28202,
+      "name": "Charlotte Transportation Center/Arena",
+      "lon": -80.840903355078495,
+      "lat": 35.225319964722445
+    },
+    {
+      "id": 3,
+      "address": "9508 South Bv",
+      "zip": 28273,
+      "name": "I-485/South Blvd",
+      "lon": -80.882909042555752,
+      "lat": 35.107140271725363
+    },
+    {
+      "id": 4,
+      "address": "8815 Crump Rd",
+      "zip": 28134,
+      "name": "Sharon Road West",
+      "lon": -80.882075561176521,
+      "lat": 35.119458699191206
+    },
+    {
+      "id": 5,
+      "address": "7717 England St",
+      "zip": 28273,
+      "name": "Arrowood",
+      "lon": -80.8763926369069,
+      "lat": 35.135645614245576
+    },
+    {
+      "id": 6,
+      "address": "6230 South Bv",
+      "zip": 28217,
+      "name": "Archdale",
+      "lon": -80.877540213289166,
+      "lat": 35.152904162849133
+    },
+    {
+      "id": 7,
+      "address": "5703 Old Pineville Rd",
+      "zip": 28217,
+      "name": "Tyvola",
+      "lon": -80.877522366451558,
+      "lat": 35.163023643472911
+    },
+    {
+      "id": 8,
+      "address": "4756 Old Pineville Rd",
+      "zip": 28217,
+      "name": "Woodlawn",
+      "lon": -80.879119422402454,
+      "lat": 35.17580342745854
+    },
+    {
+      "id": 9,
+      "address": "3750 South Bv",
+      "zip": 28209,
+      "name": "Scaleybark",
+      "lon": -80.874982061831147,
+      "lat": 35.190887055252794
+    },
+    {
+      "id": 10,
+      "address": "129 New Bern St",
+      "zip": 28203,
+      "name": "New Bern",
+      "lon": -80.869024980828343,
+      "lat": 35.199773695328979
+    },
+    {
+      "id": 11,
+      "address": "1821 Camden St",
+      "zip": 28203,
+      "name": "East/West",
+      "lon": -80.858994238027435,
+      "lat": 35.212144275831314
+    },
+    {
+      "id": 12,
+      "address": "1511 Camden Rd",
+      "zip": 28203,
+      "name": "Bland St",
+      "lon": -80.855203084593313,
+      "lat": 35.215782239375187
+    },
+    {
+      "id": 13,
+      "address": "305 E. 3rd St",
+      "zip": 28202,
+      "name": "3rd St/Convention Center",
+      "lon": -80.843135291605194,
+      "lat": 35.223688468805456
+    },
+    {
+      "id": 14,
+      "address": "260 E. 7th St",
+      "zip": 28202,
+      "name": "7th St",
+      "lon": -80.838090896634171,
+      "lat": 35.227376373889705
+    },
+    {
+      "id": 15,
+      "address": "260 E. Stonewall St",
+      "zip": 28202,
+      "name": "Stonewall",
+      "lon": -80.847135787399694,
+      "lat": 35.221282195554039
+    },
+    {
+      "id": 16,
+      "address": "239 E 9th St",
+      "zip": 28202,
+      "name": "9th Street",
+      "lon": -80.835020688101878,
+      "lat": 35.22965485462354
+    },
+    {
+      "id": 17,
+      "address": "401 Parkwood Ave",
+      "zip": 28206,
+      "name": "Parkwood",
+      "lon": -80.823290551555303,
+      "lat": 35.236920172064693
+    },
+    {
+      "id": 18,
+      "address": "2215 N Brevard St",
+      "zip": 28206,
+      "name": "25th Street",
+      "lon": -80.81714597930997,
+      "lat": 35.241705268994252
+    },
+    {
+      "id": 19,
+      "address": "400 E 36th St",
+      "zip": 28206,
+      "name": "36th Street",
+      "lon": -80.806364806116349,
+      "lat": 35.249085129159475
+    },
+    {
+      "id": 20,
+      "address": "6501 N Tryon St",
+      "zip": 28213,
+      "name": "Tom Hunter",
+      "lon": -80.766282222428728,
+      "lat": 35.27795308860469
+    },
+    {
+      "id": 21,
+      "address": "9101 N Tryon St",
+      "zip": 28262,
+      "name": "JW Clay Blvd",
+      "lon": -80.745188633837799,
+      "lat": 35.310742949409743
+    },
+    {
+      "id": 22,
+      "address": "5600 Old Concord Rd",
+      "zip": 28213,
+      "name": "Old Concord Rd",
+      "lon": -80.77278880091319,
+      "lat": 35.259941443292867
+    },
+    {
+      "id": 23,
+      "address": "700 E Sugar Creek Rd",
+      "zip": 28205,
+      "name": "Sugar Creek",
+      "lon": -80.792853484164709,
+      "lat": 35.251426470434403
+    },
+    {
+      "id": 24,
+      "address": "9025 Cameron Blvd",
+      "zip": 28262,
+      "name": "UNC Charlotte",
+      "lon": -80.733725435987282,
+      "lat": 35.312177179950197
+    },
+    {
+      "id": 25,
+      "address": "7201 N Tryon St",
+      "zip": 28262,
+      "name": "University City Blvd",
+      "lon": -80.760866735426248,
+      "lat": 35.286785637949833
+    },
+    {
+      "id": 26,
+      "address": "8315 N Tryon St",
+      "zip": 28262,
+      "name": "McCullough",
+      "lon": -80.752881723861535,
+      "lat": 35.30112784244141
+    }
+  ]
+}
