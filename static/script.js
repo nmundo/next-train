@@ -1,6 +1,7 @@
 
 const showClosestStation = station => {
     document.getElementById('closestStation').innerText = `${station[1]} Station`;
+    document.getElementById('closestStationLink').href = window.location.href + station[0];
 };
 
 const getClosestStation = (lat, long) => {
