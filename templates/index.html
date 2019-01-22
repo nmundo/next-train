@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Blue Line Stations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
 <div class="ui top fixed large menu">
@@ -17,7 +18,19 @@
 </div>
 <div class="ui padded grid">
   <div class="column">
-      {% block content %}{% endblock %}
+      {% block content %}
+          <div class="ui centered card" id="closetStationDiv">
+              <div class="content">
+                  <h4 class="ui header">
+                      <i class="train icon"></i>
+                      <div class="content">
+                           <span id="closestStation"></span>
+                        <div class="sub header">Closest Station</div>
+                      </div>
+                  </h4>
+              </div>
+          </div>
+      {% endblock %}
   </div>
 </div>
 </body>

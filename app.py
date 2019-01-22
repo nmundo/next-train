@@ -1,5 +1,6 @@
-from flask import Flask, jsonify, render_template, g
+from flask import Flask, jsonify, render_template, g, request
 from datetime import datetime
+import numpy as np
 import json
 import sqlite3
 
@@ -56,11 +57,27 @@ def see_next_train(station_id):
 
 
 # TODO: Why is this a string and not an int..?
-@app.route('/api/<string:station_id>/')
-@app.route('/api/<string:station_id>/<string:direction>/')
+@app.route('/next_train/api/<string:station_id>/')
+@app.route('/next_train/api/<string:station_id>/<string:direction>/')
 def get_next_train_json(station_id, direction=None):
     next_train = get_next_train(station_id, direction)
     return jsonify(next_train)
+
+
+@app.route('/next_train/api/closest_station/')
+def get_closest_station():
+    lat = float(request.args.get('lat'))
+    long = float(request.args.get('long'))
+    stations = get_stations()
+    nodes = np.asarray(stations)
+    node = (lat, long)
+    dist_2 = np.sum((nodes - node) ** 2, axis=1)
+    station_id = np.argmin(dist_2)
+    db = get_db()
+    cur = db.execute(f'SELECT id, name FROM stations WHERE id = {station_id}')
+    station = cur.fetchone()
+    cur.close()
+    return jsonify(station)
 
 
 def get_next_train(station_id, direction=None):
@@ -110,6 +127,14 @@ def get_next_train(station_id, direction=None):
                     break
 
     return next_train
+
+
+def get_stations():
+    db = get_db()
+    cur = db.execute('SELECT lat, lon FROM stations ORDER BY id ASC')
+    stations = cur.fetchall()
+    cur.close()
+    return stations
 
 
 if __name__ == '__main__':
